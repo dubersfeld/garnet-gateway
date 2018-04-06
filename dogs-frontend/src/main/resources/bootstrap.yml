@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: dogs-frontend
+  profiles:
+    active: default
+

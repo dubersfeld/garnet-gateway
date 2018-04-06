@@ -1,0 +1,27 @@
+server:
+  port: 5555
+    
+zuul:
+  sensitive-headers: 
+  routes:  
+    dogs-by-address:
+      path: /dogs-by-address/**
+      url: http://localhost:8081/
+    dogs-by-service:
+      path: /dogs-by-service/**
+      serviceId: dogs-frontend
+    dogs-frontend: /dogs/**   
+    customers-by-address:
+      path: /customers-by-address/**
+      url: http://localhost:8080/
+    customers-by-service:
+      path: /customers-by-service/**
+      serviceId: customers-frontend
+    customers-frontend: /customers/**   
+    
+spring:
+  session:
+    store-type: redis
+        
+     
+     

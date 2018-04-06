@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: customers-frontend
+  profiles:
+    active: default
